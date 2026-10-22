@@ -34,9 +34,11 @@ if (dirs.length !== expectedCount) fail(`Expected ${expectedCount} skill directo
 const skillNames = new Set();
 
 function localMarkdownLinks(content, file) {
+  // Documentation often includes example links inside fenced code. Those paths
+  // describe a user's project and are not shipped package resources, so check prose links only.
+  const prose = content.replace(/^\x60\x60\x60[^\n]*\n[\s\S]*?^\x60\x60\x60[ \t]*$/gm, "").replace(/\x60[^\x60]*\x60/g, "");
   const linkPattern = /!?\[[^\]]*\]\(([^)]+)\)/g;
-  for (const match of content.matchAll(linkPattern)) {
-    let target = match[1].trim().replace(/^<|>$/g, "");
+  for (const match of prose.matchAll(linkPattern)) {    let target = match[1].trim().replace(/^<|>$/g, "");
     if (!target || /^(?:[a-z]+:|\/\/|#)/i.test(target)) continue;
     target = target.split("#", 1)[0].split("?", 1)[0];
     if (!target) continue;
