@@ -1,0 +1,40 @@
+{
+  "name": "mattpocock-skills-deepseek",
+  "version": "1.0.0",
+  "description": "Matt Pocock's stable engineering and productivity skills packaged as a native DeepSeek Harness bundle.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mulqizamzam/mattpocock-skills-deepseek.git"
+  },
+  "files": [
+    ".dsh-plugin",
+    "skills",
+    "scripts",
+    "LICENSE",
+    "README.md",
+    "CONVERSION.md",
+    "plugin.json"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "agent-skills",
+    "engineering",
+    "tdd",
+    "code-review",
+    "productivity"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./.dsh-plugin/cordis.patch.yml"
+    }
+  }
+}

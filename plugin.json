@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mattpocock-skills-deepseek",
+  "version": "1.0.0",
+  "description": "A DeepSeek Harness bundle of 27 stable engineering and productivity skills ported from Matt Pocock's skills repository.",
+  "author": {
+    "name": "mulqizamzam (DeepSeek Harness port)"
+  },
+  "homepage": "https://github.com/mulqizamzam/mattpocock-skills-deepseek",
+  "repository": "https://github.com/mulqizamzam/mattpocock-skills-deepseek",
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "engineering",
+    "skills",
+    "tdd",
+    "code-review",
+    "productivity"
+  ]
+}

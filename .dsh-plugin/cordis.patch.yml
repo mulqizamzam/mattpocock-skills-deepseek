@@ -1,0 +1,5 @@
+# DeepSeek Harness bundle layer.
+# Register the skill filesystem provider rooted at this package's bundled skills.
+- insert:
+    - id: mattpocock-skills
+      name: "mattpocock-skills-deepseek/.dsh-plugin/index.mjs"
